@@ -8,5 +8,10 @@ def index():
     return render_template('../index.html')
 
 
+@app.route('/word/<word>')
+def word(word):
+    return render_template('words.html', word=word)
+
+
 if __name__ == '__main__':
     app.run()
